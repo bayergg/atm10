@@ -8765,7 +8765,7 @@ metafile = true
 
 [[files]]
 file = "mods/emi-enchanting.pw.toml"
-hash = "9237b88b063c87c5f4b5a79c5ff8a7c287537f3deabe04027efee8298ac380dd"
+hash = "e5fc842d500bcfc7b82c631150c26a011ee40588676fe85235dba3d009459d3f"
 metafile = true
 
 [[files]]
@@ -8780,7 +8780,7 @@ metafile = true
 
 [[files]]
 file = "mods/emi-professions-emip.pw.toml"
-hash = "754913a9771c3c3a550773c59d7d8c04536585b17ddc8b045ad3af9a11080cf9"
+hash = "5f8a8312a385fa3e76102fe05f975573050641292664923b4db22abf828d2c27"
 metafile = true
 
 [[files]]
@@ -8790,7 +8790,7 @@ metafile = true
 
 [[files]]
 file = "mods/emiffect-status-effects-emi-plugin.pw.toml"
-hash = "08b5fe6bbf5980820af8addc37e5ee41e48756400d86f9f554222f27b3ccecb5"
+hash = "e4d5a23da5099ddbe11d56b1f42c3a04cbb34000c78123f8924714a902ebb073"
 metafile = true
 
 [[files]]
@@ -9210,12 +9210,12 @@ metafile = true
 
 [[files]]
 file = "mods/iris-flywheel-compat.pw.toml"
-hash = "a13b11e2bf84dc02e943563104c8ee7eb30999f2f267de8116ec8f99f6fcbbeb"
+hash = "86a830d6289a6cdcb84895b100df6533a72bfabd36c3e987e4c548c1452109dd"
 metafile = true
 
 [[files]]
 file = "mods/irisshaders.pw.toml"
-hash = "1c6c4862ca39adcd77485c161ae89fe6989c926c2d98f528a14598acdd56da97"
+hash = "b6a8af0232146daabb335e71d4fa385a97a8d3640301e7d0d666659c08e6a86c"
 metafile = true
 
 [[files]]
@@ -10130,12 +10130,12 @@ metafile = true
 
 [[files]]
 file = "mods/sodium-extra.pw.toml"
-hash = "b16ee8ff10576cf6ef43fd6a2828463faf96de88e6409f9ee6b3dd31645d282d"
+hash = "03d264a85c6b6fd0f011c958caf94a3238931fdd48c5c156ddb6e13fc16ce601"
 metafile = true
 
 [[files]]
 file = "mods/sodium.pw.toml"
-hash = "8d5628a4af0f355519b17bb0c6e5783c30aa78f6aa04b77b3892cd5d7c10af03"
+hash = "f3c75c6d415e4d68307d972ed30ced99ba05968c7ff85301154a60fc42eeed95"
 metafile = true
 
 [[files]]
