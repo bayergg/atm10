@@ -10583,25 +10583,25 @@ hash = "db4ba9188052b75c67fe536e5e7fc127499611abcb98b3542cf79a450fa13ece"
 
 [[files]]
 file = "resourcepacks/faithful-32x.pw.toml"
-hash = "8700605a4e840c00a8d34cdabc4daa2a0cbff4bbdc9741d5ee1fa3861d9188f9"
+hash = "c25bbe6b2e4c86571f2a471b8331dfb3137d6713661a74bb5929072e2576c044"
 metafile = true
 
 [[files]]
 file = "shaderpacks/bsl-shaders.pw.toml"
-hash = "6d9bbd7b23c083646f95290fdb247e84aa8c2ec96a23e625e73d504587a87547"
+hash = "8a3236628ee31b091f6e58d518ebff476a6abc02835f3e3b3fce62f62bbed415"
 metafile = true
 
 [[files]]
 file = "shaderpacks/complementary-reimagined.pw.toml"
-hash = "77648e26296071f790bea303b2b2c171b64681385e5b3bacada7d9f75dd54297"
+hash = "369d2850f7642e0ff00a9ed94b4966867d3a11ca5de4bc7a85bb74e0d29cbd60"
 metafile = true
 
 [[files]]
 file = "shaderpacks/complementary-unbound.pw.toml"
-hash = "0ecc8df3b8cc35aaae4ea7757417a8050e99657e683e7b7e05410aeedfc28d0b"
+hash = "238ae9fac53a63921654ddea2bf814cb4c3751363a03f8b9e1f66f3653a6a4fb"
 metafile = true
 
 [[files]]
 file = "shaderpacks/makeup-ultra-fast-shader.pw.toml"
-hash = "757acf57fbc1e8a7ab64d4750e28186e16efcc49035d0a28624baab7b561c559"
+hash = "1e75607a88631ca3472a8c011f80d95904b1746a39a23dbe3fc52f6e4b29a48d"
 metafile = true
