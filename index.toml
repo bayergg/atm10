@@ -8145,10 +8145,6 @@ file = "kubejs/startup_scripts/hyperbox/hyperbox.js"
 hash = "5264db8742e436434ca2bd0db2cc2a9681103854d5e99b258214e266585b8415"
 
 [[files]]
-file = "launcher_profiles.json"
-hash = "a47f2b5d16710c1063518b40254d756b7039b6a58f60e8a4f6c41ee6e707d54c"
-
-[[files]]
 file = "mods/accelerated-decay.pw.toml"
 hash = "0c31f109b6c4dca94a153fbdd827bbd5f96149fd5c7863ba0ba41fcab801afe0"
 metafile = true
