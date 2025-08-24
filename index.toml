@@ -9595,11 +9595,6 @@ hash = "78160807ea27008afa29e2d44b349c5ecb4f006862cd8ddf0810532b3241bf7f"
 metafile = true
 
 [[files]]
-file = "mods/monocle.pw.toml"
-hash = "6b3162bd465223d18618a92c51e4cff115e06b11e4fe05865b80efa3f588fe04"
-metafile = true
-
-[[files]]
 file = "mods/monolib.pw.toml"
 hash = "4387cfb8d69490641337ec3d42a8a434683a2d2b129990705e78a800f2795ad1"
 metafile = true
