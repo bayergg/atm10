@@ -10505,6 +10505,10 @@ hash = "f495361b345db3d36dee182414e94eebbcd331ad016864648b495f0384ee118c"
 metafile = true
 
 [[files]]
+file = "options.txt"
+hash = "844c385b94c22af41adf9754598ba09ec651dfcece08f80397dfd9c0c9150f75"
+
+[[files]]
 file = "packmenu/resources/assets/packmenu/buttons/accessibility.json"
 hash = "da14f0aa831a669c38114e2ee191802b140d940d50522c46e42d9cca2a6fe848"
 
