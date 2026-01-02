@@ -8400,6 +8400,11 @@ hash = "8414a136dd695904e4fbb6c91b3c541706933b44f5f8c860ac51b594168e7fb2"
 metafile = true
 
 [[files]]
+file = "mods/basic-login.pw.toml"
+hash = "93243befcb29f885b1a8da81c3f0376d81831f7f24f96d33a5d7bedfa679dc3a"
+metafile = true
+
+[[files]]
 file = "mods/baubley-heart-canisters.pw.toml"
 hash = "6852b0be6a6f34baaedf7aa9e7c4dc2559dc54ecdd38048d1ba487d7df7cfcd9"
 metafile = true
@@ -8515,6 +8520,11 @@ hash = "a420a29256413ef0b90d15f6c8b440b5309a4afc4c1aad92b80c4dd9a14786ba"
 metafile = true
 
 [[files]]
+file = "mods/chunky.pw.toml"
+hash = "68cc51e721e993a8b7a2cbaf45369933b22b07a9c82327ab14757ee10684aa81"
+metafile = true
+
+[[files]]
 file = "mods/clean-swing-through-grass.pw.toml"
 hash = "69968d3337983555531273604549745ad124bc95e19363f69cb4d1e41f47a980"
 metafile = true
@@ -8596,7 +8606,7 @@ metafile = true
 
 [[files]]
 file = "mods/corail-tombstone.pw.toml"
-hash = "c920ce97b0d85d9c81c0aaa3fb76acdd5191371d3ea431a87ce90290774ca578"
+hash = "75a86f827017508b05217a7a8f2115608b93de5e7cb6d7c7d5738ed45f03f5ea"
 metafile = true
 
 [[files]]
@@ -8897,6 +8907,11 @@ metafile = true
 [[files]]
 file = "mods/factory-blocks.pw.toml"
 hash = "f8890e55be67dddba9789c5913e934ae06c2f0c3af83c231916c0ef305a16ff5"
+metafile = true
+
+[[files]]
+file = "mods/fallingtree.pw.toml"
+hash = "f9f1e1c017e7b902531a68a3f8c9650a18a40a8ab9f0bf44ef5af08b37da8aaf"
 metafile = true
 
 [[files]]
@@ -10117,6 +10132,11 @@ metafile = true
 [[files]]
 file = "mods/smithing-template-viewer.pw.toml"
 hash = "d57e8161eb21eaa4a1d3deac98926afda0f4d01cf891deee934868d1cac5dd74"
+metafile = true
+
+[[files]]
+file = "mods/smooth-chunk-save.pw.toml"
+hash = "e1732bc6bcc077b23a2784e21839c4d113e2dbf0de29e9448fb7b39d28b19a61"
 metafile = true
 
 [[files]]
