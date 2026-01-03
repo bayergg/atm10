@@ -25,8 +25,8 @@ jobs:
       - name: Prepare build directory
         shell: bash
         run: |
-          rm -rf .build
-          mkdir -p .build
+          rm -rf "${{ runner.temp }}/atm10-build"
+          mkdir -p "${{ runner.temp }}/atm10-build"
 
       - name: Clone NeoNebula
         shell: bash
@@ -50,7 +50,7 @@ jobs:
         working-directory: neonebula
         shell: bash
         env:
-          ROOT: ${{ github.workspace }}/.build
+          ROOT: ${{ runner.temp }}/atm10-build
           BASE_URL: https://example.invalid/
         run: |
           export JAVA_EXECUTABLE="$JAVA_HOME/bin/java"
@@ -83,7 +83,7 @@ jobs:
       - name: Copy staged pack into NeoNebula structure
         shell: bash
         run: |
-          ROOT="${{ github.workspace }}/.build"
+          ROOT="${{ runner.temp }}/atm10-build"
           SERVER="$ROOT/servers/atm10-1.21.1"
           STAGING="$RUNNER_TEMP/atm10-pack"
 
@@ -106,7 +106,7 @@ jobs:
         working-directory: neonebula
         shell: bash
         env:
-          ROOT: ${{ github.workspace }}/.build
+          ROOT: ${{ runner.temp }}/atm10-build
           BASE_URL: https://example.invalid/
         run: |
           export JAVA_EXECUTABLE="$JAVA_HOME/bin/java"
@@ -116,5 +116,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: atm10-helios-build
-          path: .build
+          path: ${{ runner.temp }}/atm10-build
           if-no-files-found: error
