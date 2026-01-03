@@ -1,0 +1,120 @@
+name: Build Helios Distro (ATM10)
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Prepare build directory
+        shell: bash
+        run: |
+          rm -rf .build
+          mkdir -p .build
+
+      - name: Clone NeoNebula
+        shell: bash
+        run: |
+          rm -rf neonebula
+          git clone --depth 1 https://github.com/BelgianDev/NeoNebula neonebula
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+          cache-dependency-path: neonebula/package-lock.json
+
+      - name: Install NeoNebula dependencies
+        working-directory: neonebula
+        shell: bash
+        run: npm ci
+
+      - name: Generate NeoNebula server skeleton
+        working-directory: neonebula
+        shell: bash
+        env:
+          ROOT: ${{ github.workspace }}/.build
+          BASE_URL: https://example.invalid/
+        run: |
+          export JAVA_EXECUTABLE="$JAVA_HOME/bin/java"
+          npm run start -- init root
+          npm run start -- generate server atm10 1.21.1 --neoforge 21.1.191
+
+      - name: Download packwiz-installer-bootstrap
+        shell: bash
+        run: |
+          curl -fsSL -o packwiz-installer-bootstrap.jar \
+            https://github.com/comp500/packwiz-installer-bootstrap/releases/latest/download/packwiz-installer-bootstrap.jar
+
+      - name: Materialize pack via packwiz-installer (server side)
+        shell: bash
+        env:
+          CURSEFORGE_API_KEY: ${{ secrets.CURSEFORGE_API_KEY }}
+          PACKWIZ_CURSEFORGE_API_KEY: ${{ secrets.CURSEFORGE_API_KEY }}
+        run: |
+          STAGING="$RUNNER_TEMP/atm10-pack"
+          rm -rf "$STAGING"
+          mkdir -p "$STAGING"
+
+          java -jar ./packwiz-installer-bootstrap.jar \
+            --no-gui \
+            --side server \
+            --timeout 1 \
+            --pack-folder "$STAGING" \
+            "${{ github.workspace }}/pack.toml"
+
+      - name: Copy staged pack into NeoNebula structure
+        shell: bash
+        run: |
+          ROOT="${{ github.workspace }}/.build"
+          SERVER="$ROOT/servers/atm10-1.21.1"
+          STAGING="$RUNNER_TEMP/atm10-pack"
+
+          mkdir -p "$SERVER/forgemods/required" "$SERVER/files"
+
+          shopt -s nullglob
+          for jar in "$STAGING/mods/"*.jar; do
+            cp -f "$jar" "$SERVER/forgemods/required/"
+          done
+          shopt -u nullglob
+
+          for dir in config defaultconfigs kubejs packmenu resourcepacks shaderpacks; do
+            if [ -d "$STAGING/$dir" ]; then
+              rm -rf "$SERVER/files/$dir"
+              cp -a "$STAGING/$dir" "$SERVER/files/$dir"
+            fi
+          done
+
+      - name: Generate distribution.json
+        working-directory: neonebula
+        shell: bash
+        env:
+          ROOT: ${{ github.workspace }}/.build
+          BASE_URL: https://example.invalid/
+        run: |
+          export JAVA_EXECUTABLE="$JAVA_HOME/bin/java"
+          npm run start -- generate distro distribution
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: atm10-helios-build
+          path: .build
+          if-no-files-found: error
